@@ -97,7 +97,7 @@ navigator.mediaDevices
     });
   });
 
-  // Remove peers once the connection is deleted
+// Remove peers once the connection is deleted
 socket.on("user-disconnected", (userId) => {
   if (peers[userId]) {
     peers[userId].close();
@@ -213,6 +213,10 @@ const setPlayVideo = () => {
     <span>Play Video</span>
   `;
   document.querySelector(".main__video_button").innerHTML = html;
+};
+
+const whiteBoard = () => {
+  window.open("http://localhost:3001/");
 };
 
 //screenShare
